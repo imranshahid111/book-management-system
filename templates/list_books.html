@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
+</head>
+<body>
+    <div style="display: flex; justify-content: space-between;">
+        <h1>Book List</h1>
+        <a style="align-content: center;" href="/add">Add New Book</a>
+    </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Price</th>
+                <th>Publication Year</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+            <tr>
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.genre }}</td>
+                <td>{{ book.price }}</td>
+                <td>{{ book.publication_year }}</td>
+                <td>
+                    <a style="background: green;" href="/edit/{{ book.id }}">Edit</a>
+                    <a href="/delete/{{ book.id }}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

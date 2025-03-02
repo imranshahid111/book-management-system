@@ -1,0 +1,30 @@
+# 🛑 Python-specific files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 🛑 Virtual environment
+venv/
+
+# 🛑 VS Code settings
+.vscode/
+
+# 🛑 Environment variables & secrets
+.env
+*.env
+
+# 🛑 Database files (if using SQLite)
+*.db
+*.sqlite3
+
+# 🛑 Logs & cache
+logs/
+*.log
+
+# 🛑 Jupyter Notebooks checkpoints (if any)
+.ipynb_checkpoints/
+
+# 🛑 OS-specific files
+.DS_Store
+Thumbs.db
